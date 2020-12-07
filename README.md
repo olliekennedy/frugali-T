@@ -42,7 +42,7 @@ It uses:
 - [Jest](https://jestjs.io/) for testing.
 - [Cypress](https://www.cypress.io/) for end-to-end testing.
 ## Card wall
-https://trello.com/b/ok1PiZf0/acebook-project
+https://trello.com/b/QN4T3w6L/final-project-covid-comparision
 ## Project set-up
 ### Install Node.js
 1. Install Node Version Manager (NVM)
