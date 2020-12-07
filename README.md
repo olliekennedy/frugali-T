@@ -1,12 +1,12 @@
-# frugali-T
+# frugali-TEA
 
-## The Team
-* Eunice Kontor
-* Grace Farren
-* Ollie Kennedy
-* Rhianna Stuart
-* Hatairy Dos Santos
-* Sabarinth Kunnambath
+## the TEAm
+* Eunice Redbush Kontor
+* Grace Earl Grey Farren
+* Ollie Chamomile Kennedy
+* Rhianna Peppermint Stuart
+* Hatairy Dos-Fruity Santos
+* Sabarinth Oolong Kunnambath
 
 ## MVP
 * income
@@ -17,6 +17,7 @@
   
 ## Iteration 2
 * login & authentication (add the notion of a user)
+  * check the user knows how to make tea
   * front end page with fields
   * bcrypt / encryption
   * database for username and passwords
