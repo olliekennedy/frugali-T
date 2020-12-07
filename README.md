@@ -1,5 +1,13 @@
 # frugali-T
 
+## The Team
+* Eunice Kontor
+* Grace Farren
+* Ollie Kennedy
+* Rhianna Stuart
+* Hatairy Dos Santos
+* Sabarinth Kunnambath
+
 ## MVP
 * income
 * categories
@@ -14,7 +22,7 @@
   * database for username and passwords
     * collection for x
 * custom categories
-* ideal spending target
+* ideal spending / savings target
 * outgoings
 * pie-chart for budget split
 * multiple sources of income
