@@ -1,0 +1,24 @@
+{
+  "name": "frugali-tea",
+  "version": "1.0.0",
+  "description": "We are just a group of tea frugal lovers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olliekennedy/frugali-TEA.git"
+  },
+  "author": "fp_team_3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olliekennedy/frugali-TEA/issues"
+  },
+  "homepage": "https://github.com/olliekennedy/frugali-TEA#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}
