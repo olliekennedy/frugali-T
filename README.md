@@ -1,5 +1,8 @@
 # frugali-TEA
 
+## What on earth are you talking about
+We are just a group of frugal tea-lovers. The less money you spend each month, the more you can spend on TEA.
+
 ## the TEAm
 * Eunice Redbush Kontor
 * Grace Earl Grey Farren
