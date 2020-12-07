@@ -13,10 +13,10 @@ context('Check H1', () => {
 })
 context('Check salary', () =>{
   beforeEach(() => {
-  cy.visit("/")  
+  cy.visit("/")
   })
   it('user can input their salary', function() {
-    cy.get("#income-input").find("[type='text']").type('100000');
+    cy.get("#income-input").type('100000');
     cy.get('#net-output').should('have.value', '100000')
   })
 });
