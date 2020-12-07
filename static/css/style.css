@@ -1,5 +1,5 @@
 div.income-form-div {
-  font-family: Courier, Helvetica, sans-serif;
+  font-family: 'Muli', Helvetica, sans-serif;
   font-size: 28px;
   width: 500px;
   margin-left: auto;
@@ -12,8 +12,9 @@ form.income-form {
 }
 
 h1 {
-  font-family: Courier, Helvetica, sans-serif;
+  font-family: 'Muli', Helvetica, sans-serif;
   font-size: 50pt;
+  margin-left: 20px;
 }
 
 input#income_input {
