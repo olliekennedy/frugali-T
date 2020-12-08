@@ -26,6 +26,6 @@ context('see categories heading', () => {
     cy.get('#tea-input').type('10000');
     cy.get('#loans-input').type('10000');
     cy.get('#savings-input').type('10000');
-    cy.get('#net-output').should('have.text', '£20000')
+    cy.get('#net-output').should('have.text', '£90000')
   })
 })
