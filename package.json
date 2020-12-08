@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "npm run test:unit && npm run cypress:open",
-    "test:unit" : "jest",
+    "test:unit": "jest",
     "cypress:open": "cypress open"
   },
   "repository": {
