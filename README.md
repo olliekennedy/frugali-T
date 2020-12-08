@@ -6,9 +6,9 @@ We are just a group of frugal tea-lovers. The less money you spend each month, t
 ## the TEAm
 * Eunice Redbush Kontor
 * Grace Earl Grey Farren
+* Hatairy Dos-Fruity Santos
 * Ollie Chamomile Kennedy
 * Rhianna Peppermint Stuart
-* Hatairy Dos-Fruity Santos
 * Sabarinth Oolong Kunnambath
 
 ## MVP
