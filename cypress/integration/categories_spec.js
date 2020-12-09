@@ -14,6 +14,6 @@ context('see categories heading', () => {
       .should("contain", "Hobbies")
       .should("contain", "Savings")
       .should("contain", "Entertainment")
-      .should("contain", "Tea")
+      .should("contain", "TEA")
   })
 })
