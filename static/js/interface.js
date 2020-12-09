@@ -19,4 +19,15 @@ function updateOutgoing() {
   outG.textContent = `£${sum}`;
 };
 
+var myArray = [
+  "Tea is the second most consumed beverage on the planet ",
+  "Tea is good for you ",
+  "Tea was once considered dangerous"
+];
+var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+document.getElementById("random").innerHTML = randomItem;
+
+console.log(randomItem);
+
+
 updateValue()
