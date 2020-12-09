@@ -14,7 +14,7 @@ function updateValue(e) {
 const allOutgoings = document.querySelector('#outgoings').querySelectorAll('input')
 function updateOutgoing() {
   allOutgoingsArray = Array.from(allOutgoings)
-  values = allOutgoingsArray.map ( x => parseInt(x.value) || 0 )
+  values = allOutgoingsArray.map ( elem => parseInt(elem.value) || 0 )
   var sum = values.reduce((a, b) => a + b, 0)
   outG.textContent = `£${sum}`;
 };
