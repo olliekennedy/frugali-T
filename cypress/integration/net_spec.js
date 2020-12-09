@@ -3,15 +3,28 @@ context('Check net', () =>{
     cy.visit("/")
   })
   it('shows income minus outgoings in the net', function() {
-    cy.get("#income-input").type('100000');
-    cy.get('#bills-input').type('10000');
-    cy.get('#groceries-input').type('10000');
-    cy.get('#travel-input').type('10000');
-    cy.get('#entertainment-input').type('10000');
-    cy.get('#hobbies-input').type('10000');
-    cy.get('#tea-input').type('10000');
-    cy.get('#loans-input').type('10000');
-    cy.get('#savings-input').type('10000');
-    cy.get('#net-output').should('have.text', '£20000')
+    cy.get('#savings-input').type('900');
+    cy.get('#net-output').should('have.text', '£100')
   })
+  it('has font colour black and background green when £21', function() {
+    cy.get('#savings-input').type('979');
+    cy.get('#net-output').should('have.css', 'color', 'rgb(0, 0, 0)')
+    cy.get('body').should('have.css', 'backgroundColor', 'rgb(218, 240, 220)')
+  })
+  it('changes colour to orange when £20', function() {
+    cy.get('#savings-input').type('980');
+    cy.get('#net-output').should('have.css', 'color', 'rgb(255, 165, 0)')
+    cy.get('body').should('have.css', 'backgroundColor', 'rgb(237, 225, 202)')
+  })
+  it('changes colour to red when £0', function() {
+    cy.get('#savings-input').type('1000');
+    cy.get('#net-output').should('have.css', 'color', 'rgb(255, 0, 0)')
+    cy.get('body').should('have.css', 'backgroundColor', 'rgb(232, 202, 202)')
+  })
+  it('changes colour to red when £-10', function() {
+    cy.get('#savings-input').type('1010');
+    cy.get('#net-output').should('have.css', 'color', 'rgb(255, 0, 0)')
+    cy.get('body').should('have.css', 'backgroundColor', 'rgb(232, 202, 202)')
+  })
+
 });
