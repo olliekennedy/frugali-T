@@ -1,44 +1,22 @@
-// const input = document.querySelector('input');
-// const log = document.getElementById('net-output');
-// const totalOutgoings = document.getElementById('groceries-input');
-// console.log(totalOutgoings);
-// // input.addEventListener('input', updateValue);
-// let inputs = document.querySelectorAll("input");
-// inputs.forEach(function(elem) {
-//     elem.addEventListener("input", updateValue);
-// });
-// function updateValue(e) {
-//     log.textContent = `£${e.target.value}`;
-// }
-const input = document.querySelector('input');
-const outgoings = document.querySelector("#outgoings")
-const log = document.getElementById('net-output');
+const input = document.querySelectorAll('input');
+input.forEach(el => {
+  el.addEventListener('input', updateValue);
+})
+
+const income = document.getElementById('income-input')
+const net = document.getElementById('net-output');
 const outG = document.getElementById('outgoings-output');
-
-input.addEventListener('input', updateValue);
 function updateValue(e) {
-  log.textContent = `£${e.target.value}`;
-  // console.log(checking());
+  updateOutgoing()
+  net.textContent = `£${+income.value - +outG.textContent.substring(1)}`;
 };
 
-outgoings.addEventListener('input', updateOutgoing);
-function updateOutgoing(e) {
-  outG.textContent = `£${e.target.value}`;
+const allOutgoings = document.querySelector('#outgoings').querySelectorAll('input')
+function updateOutgoing() {
+  allOutgoingsArray = Array.from(allOutgoings)
+  values = allOutgoingsArray.map ( x => parseInt(x.value) || 0 )
+  var sum = values.reduce((a, b) => a + b, 0)
+  outG.textContent = `£${sum}`;
 };
 
-// function outgoingValue(){
-//   const sum = bills.value;
-//   document.getElementById("outgoings-output").textContent = `£${sum}`;
-// };
-
-// const bills = document.getElementById('bills-input');
-// const groceries = document.getElementById('groceries-input');
-// const travel = document.getElementById('travel-input');
-// const loans = document.getElementById('loans-input');
-// const hobbies = document.getElementById('hobbies-input');
-// const tea = document.getElementById('tea-input');
-// const savings = document.getElementById('savings-input');
-// const entertainment = document.getElementById('entertainment-input');
-
-
-
+updateValue()
