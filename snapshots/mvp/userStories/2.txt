@@ -1,0 +1,3 @@
+As a user
+So I can plan my budget
+I want to see each categories 

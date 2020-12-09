@@ -1,0 +1,33 @@
+{
+  "name": "frugali-tea",
+  "version": "1.0.0",
+  "description": "We are just a group of tea frugal lovers",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test:unit && npm run cypress:open",
+    "test:unit": "jest",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olliekennedy/frugali-TEA.git"
+  },
+  "author": "fp_team_3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olliekennedy/frugali-TEA/issues"
+  },
+  "homepage": "https://github.com/olliekennedy/frugali-TEA#readme",
+  "dependencies": {
+    "cypress": "^6.0.1",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6",
+    "package.json": "^2.0.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.2"
+  }
+}
