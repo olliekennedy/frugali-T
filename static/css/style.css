@@ -9,12 +9,17 @@ div.income-form-div {
 form.income-form {
   width: 100%;
   margin-left: 0px;
+  padding: 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
 }
 
 h1 {
   font-family: 'Muli', Helvetica, sans-serif;
   font-size: 50pt;
   margin-left: 20px;
+
 }
 
 input#income_input {
