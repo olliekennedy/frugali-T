@@ -43,7 +43,6 @@ var body = document.querySelector("body")
 function updateColor() {
   value = +net.textContent.substring(1)
   body = document.querySelector("body")
-  console.log(value)
   if (value > netWarning) {
     setGreen()
   } else if (value > netDanger) {
