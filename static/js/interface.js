@@ -20,13 +20,22 @@ function updateOutgoing() {
   outG.textContent = `£${sum}`;
 };
 
-var myArray = [
+var facts = [
   "Tea is the second most consumed beverage on the planet ",
   "Tea is good for you ",
   "Tea was once considered dangerous"
 ];
-var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
-document.getElementById("random").innerHTML = randomItem;
+var randomFact = facts[Math.floor(Math.random()*facts.length)];
+document.getElementById("random-fact").innerHTML = randomFact;
+
+var tips = [
+  "Enter your income first",
+  "Teabag, water, milk. End of conversation.",
+  "A strong brew is a good brew",
+  "Change your budgets if your net is below 0"
+];
+var randomTip = tips[Math.floor(Math.random()*tips.length)];
+document.getElementById("random-tip").innerHTML = randomTip;
 
 const netWarning = 20
 const netDanger = 0
