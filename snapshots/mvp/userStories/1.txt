@@ -1,0 +1,3 @@
+As a user
+So I can see my income
+I can add my income

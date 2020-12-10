@@ -1,0 +1,3 @@
+As a user
+so I can expand my knowledge on tea
+I want to be able to see random tea facts
