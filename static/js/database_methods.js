@@ -1,1 +1,1 @@
-var Budget = require('../../models/frugali_TEA');
+var Budget = require('../../models/budget');
