@@ -1,11 +1,13 @@
-const budgetSchema = new mongoose.Schema({
-Bills: number,
-Entertainment: number,
-Travel: number,
-Loans: number,
-Tea: number,
-Hobbies: number,
-Savings: number,
+var mongoose = require('mongoose');
+
+const BudgetSchema = new mongoose.Schema({
+  bills: Number,
+  entertainment: Number,
+  travel: Number,
+  loans: Number,
+  tea: Number,
+  hobbies: Number,
+  savings: Number
 });
-var User = mongoose.model('budget', budgetSchema);
+var Budget = mongoose.model('Budget', BudgetSchema);
 module.exports = Budget;
