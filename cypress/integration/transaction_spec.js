@@ -18,8 +18,10 @@ context("transactions form", () => {
   })
 
   it("shows the new transaction after it has been entered", () => {
-    cy.get(".description-input").type("Redbush")
-    cy.get(".newtransaction-form").submit()
+    cy.get("#description-input").type("Redbush")
+    cy.get("#category-selector").select("tea")
+    cy.get("#amount-input").type("100")
+    cy.get("#newtransaction-form").submit()
     cy.get(".previous-transactions").should("contain", "Redbush");
   })
 })

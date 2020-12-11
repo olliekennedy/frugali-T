@@ -7,11 +7,21 @@
   <body>
     <h1><%= title %></h1>
     <h3>Spill the TEA: Enter your transactions</h3>
-    <form id="formAddUser" name="adduser" method="post" action="/adduser">
-      <input id="inputUserName" type="text" placeholder="username" name="username" />
-      <input id="inputUserEmail" type="text" placeholder="email" name="useremail" />
-      <button id="btnSubmit" type="submit">Submit</button>
+    <form id="newtransaction-form" name="new-transaction" method="post" action="transactions/new">
+      <input id="description-input" type="text" placeholder="description" name="description" />
+      <label for="category-selector">Choose a categortea:</label>
+      <select id="category-selector" name="category">
+        <option value="tea">TEA</option>
+        <option value="bills">Bills</option>
+        <option value="loans">Loans</option>
+        <option value="entertainment">Entertainment</option>
+      </select>
+      <input id="amount-input" type="text" placeholder="amount" name="amount" />
+      <button id="new_transaction_submit" type="submit">Submit</button>
     </form>
+    <div class="previous-transactions">
+
+    </div>
 
 
   </body>
