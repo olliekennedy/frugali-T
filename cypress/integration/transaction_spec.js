@@ -4,7 +4,22 @@ context("transactions", () => {
   })
 
   it("should show a heading", () => {
-    cy.get("h1").should("contain", "Spill the Tea");
-    cy.get("h3").should("contain", "Enter you transactions");
+    cy.get("h1").should("contain", "Transactions");
+  })
+})
+
+context("transactions form", () => {
+  beforeEach(() => {
+    cy.visit('/transactions')
+  })
+
+  it("should show form heading", () =>{
+    cy.get("h3").should("contain", "Spill the TEA: Enter your transactions");
+  })
+
+  it("shows the new transaction after it has been entered", () => {
+    cy.get(".description-input").type("Redbush")
+    cy.get(".newtransaction-form").submit()
+    cy.get(".previous-transactions").should("contain", "Redbush");
   })
 })

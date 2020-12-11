@@ -29,15 +29,11 @@ app.use("/", express.static('./'));
 app.get('/', (req, res) => {
   res.render('index');
 })
-// app.use("/transactions", transactionsRouter);
-
-
-
-
+app.use("/transactions", transactionsRouter);
 
 // console.log('test')
-// app.listen(port, () => {
-//   console.log(`App listening on: ${port}`);
-// })
+app.listen(port, () => {
+  console.log(`App listening on: ${port}`);
+})
 
 module.exports = app;
