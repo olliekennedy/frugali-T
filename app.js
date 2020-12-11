@@ -1,23 +1,22 @@
-const express = require('express');
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 const app = express();
 const ejs = require('ejs');
 const port = 3000;
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/frugali_TEA', {useNewUrlParser: true});
-//var MongoClient = require('mongodb').MongoClient
+
+var monk = require('monk');
+var dbMonk = monk('localhost:27017/frugali_TEA')
 const db = mongoose.connection
-//MongoClient.connect("mongodb://localhost:27017/test", function (err, db) {
-//collection.insert({ id: 1,"Bills" : 100, "Groceries" : 250, "Travel" : 150, "Loans" : 70, "Hobbies" : 80, "Tea" : 50, "Savings" : 400, "Entertainment" : 30});
-//});
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-//console.log ("we're connected!")
 });
 app.set('view engine', 'ejs');
 
-// app.configure(function(){
-
-// });
 app.use("/", express.static('./'));
 
 app.get('/', (req, res) => {
