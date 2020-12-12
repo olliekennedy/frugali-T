@@ -20,9 +20,30 @@ app.set('view engine', 'ejs');
 // });
 app.use("/", express.static('./'));
 
+//Redefined routes - can be put in the router directory to keep app.js clean
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('homepage');
 })
+
+app.get('/account', (req, res) => {
+  res.render('account');
+})
+
+app.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
+app.get("/signin", (req, res) => {
+  res.render('signin');
+})
+
+app.post('/signup', (req, res) => {
+})
+app.post('/signin', (req, res) => {
+})
+
+
+
 
 console.log('test')
 app.listen(port, () => {
