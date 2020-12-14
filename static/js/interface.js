@@ -9,8 +9,14 @@ const outG = document.getElementById('outgoings-output');
 function updateValue(e) {
   updateOutgoing()
   net.textContent = `£${+income.value - +outG.textContent.substring(1)}`;
-  bar.animate(1.0);  // Number from 0.0 to 1.0
+  console.log(income.value)
+  console.log(outG.textContent.substring(1))
+  console.log(income.value - outG.textContent.substring(1))
+  var maximum = income.value
+  balance = income.value -outG.textContent.substring(1)
+  bar.animate(  balance / maximum );
   updateColor()
+const progressbar = document.getElementById('progressbar');
 };
 
 const allOutgoings = document.querySelector('#outgoings').querySelectorAll('input')
@@ -55,17 +61,14 @@ function updateColor() {
 
 function setGreen() {
   net.style.color = "rgb(0, 0, 0)"
-  body.style.backgroundColor = 'rgb(218, 240, 220)'
 }
 
 function setOrange() {
   net.style.color = "rgb(255, 165, 0)"
-  body.style.backgroundColor = 'rgb(237, 225, 202)'
 }
 
 function setRed() {
   net.style.color = "rgb(255, 0, 0)"
-  body.style.backgroundColor = 'rgb(232, 202, 202)'
 }
 
 
@@ -82,12 +85,14 @@ var bar = new ProgressBar.SemiCircle('#ProgressBar', {
     value: '',
     alignToBottom: false
   },
-  from: {color: '#FFEA82'},
-  to: {color: '#ED6A5A'},
+  from: {color: '#ff0000'},
+  to: {color:'#009900'},
   // Set default step function for all animate calls
   step: (state, bar) => {
+
     bar.path.setAttribute('stroke', state.color);
-    var value = Math.round(bar.value() * 100);
+    //var.path.setAttribute('stroke',state.color)
+    var value = Math.round(bar.value() );
     if (value === 0) {
       bar.setText('');
     } else {
