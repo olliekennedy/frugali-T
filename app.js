@@ -13,6 +13,7 @@ var transactionsRouter = require("./routes/transactions")
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/frugali_TEA', {useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection
+// console.log("I am a db and this is my jam" + db)
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   });
@@ -21,6 +22,11 @@ db.once('open', function() {
 var monk = require('monk');
 var dbMonk = monk('localhost:27017/frugali_TEA')
 
+// Make our db accessible to our router
+app.use(function(req, res, next){
+  req.db = db;
+  next();
+});
 
 app.use(express.urlencoded({ extended: false }));
 

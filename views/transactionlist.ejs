@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>User List</title>
+    <title>Transaction List</title>
     <link rel='stylesheet' type="text/css" href='static/css/style.css' />
   </head>
   <body>
-    <h1>User List</h1>
+    <h1>Transactions List</h1>
+    <h1><%- transactions %></h1>
     <ul>
       <%
         var list = '';
-        for (i = 0; i < userlist.length; i++) {
-          list += '<li><a href="mailto:' + userlist[i].email + '">' + userlist[i].username + '</a></li>';
+        for (i = 0; i < transactions.length; i++) {
+          list += '<li>transactions.description</li>';
         }
       %>
       <%- list %>
