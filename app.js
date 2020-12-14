@@ -7,7 +7,6 @@ const app = express();
 const ejs = require('ejs');
 const port = 3000;
 
-var transactionsRouter = require("./routes/transactions")
 
 // mongoose connection
 const mongoose = require('mongoose');
@@ -18,20 +17,23 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   });
 
-// monk connection
-var monk = require('monk');
-var dbMonk = monk('localhost:27017/frugali_TEA')
+// // monk connection
+// var monk = require('monk');
+// var dbMonk = monk('localhost:27017/frugali_TEA')
+
+
+app.use(express.urlencoded({ extended: false }));
+
+//  view engine setup
+app.set('view engine', 'ejs');
+
+var transactionsRouter = require("./routes/transactions")
 
 // Make our db accessible to our router
 app.use(function(req, res, next){
   req.db = db;
   next();
 });
-
-app.use(express.urlencoded({ extended: false }));
-
-//  view engine setup
-app.set('view engine', 'ejs');
 
 // Routes
 app.use("/", express.static('./'));

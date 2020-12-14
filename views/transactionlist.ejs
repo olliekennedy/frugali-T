@@ -6,7 +6,6 @@
   </head>
   <body>
     <h1>Transactions List</h1>
-    <h1><%- transactions %></h1>
     <ul>
       <%
         var list = '';
@@ -14,7 +13,7 @@
           list += '<li>transactions.description</li>';
         }
       %>
-      <%- list %>
+      <%- transactions %>
     </ul>
   </body>
 </html>
