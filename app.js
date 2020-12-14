@@ -21,6 +21,9 @@ db.once('open', function() {
 var monk = require('monk');
 var dbMonk = monk('localhost:27017/frugali_TEA')
 
+
+app.use(express.urlencoded({ extended: false }));
+
 //  view engine setup
 app.set('view engine', 'ejs');
 
