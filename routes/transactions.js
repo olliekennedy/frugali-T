@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
 router.post('/new', function(req, res) {
     // Set our internal DB variable
     var db = req.db;
+    console.log("chickens")
 
     // Get our form values. These rely on the "name" attributes
     var description = req.body.description;
