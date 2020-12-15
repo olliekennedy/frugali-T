@@ -18,7 +18,7 @@ var db = monk('localhost:27017/frugali_TEA')
 //   });
 
 var indexRouter = require('./routes/index');
-var newtransactionRouter = require("./routes/newtransaction");
+var transactionRouter = require("./routes/transaction");
 // var transactionlistRouter = require("./routes/transactionlist");
 
 var app = express();
@@ -41,7 +41,7 @@ app.use(function(req, res, next){
 
 // Routes
 app.use("/", indexRouter);
-app.use("/new-transaction", newtransactionRouter);
+app.use("/transaction", transactionRouter);
 // app.use("/transaction-list", transactionlistRouter);
 
 // catch 404 and forward to error handler
