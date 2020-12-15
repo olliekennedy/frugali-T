@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="static/css/signup.css">
   <title>frugali-TEA</title>
+  <script>
+    function getval()
+    {
+      alert("Tea is good for youIt takes around 2,000 tiny leaves to make just one pound of finished tea. ....GENERAL RULS .Do not leave the kettle alone when boiling tea. ...Do not brew the tea for fewer than 3 minutes. ...Do not leave the teabag in the mug. ...Do not ever use any of these (unless life or death). .NEVER put the sugar teaspoon into the tea. ...Never use a different type of milk than anticipated. ...Never ever EVER pour the milk in first");
+    }
+  </script>
 </head>
 <body>
-  <h1>Sign up</h1>
+  <div class="container2">
+      <h1>Sign up</h1><br>
+      </div>
+      <div class="container2">
+  <h3>Please fill in this form to create an account.</h3> <br>
+  </div>
   <%- include ('./partials/messages') %>
+  <div class="container">
   <form id="signup" action="/signup" method="POST">
     <label for="name"></label>
-    <input type="text" placeholder="First Name*" name="firstname" value="<%=typeof name != 'undefined' ? name : '' %>" autocomplete="off" required>
-    <input type="text" placeholder="Last Name*" name="lastname" value="<%=typeof lastname != 'undefined' ? lastname : '' %>" autocomplete="off" required><br>
-    <input type="text" placeholder="Create a Username*" name="username" value="<%=typeof username != 'undefined' ? username : '' %>" autocomplete="off" required>
+    <input type="text" id = "refresh" placeholder="First Name*" name="firstname" value="<%=typeof name != 'undefined' ? name : '' %>" autocomplete="off" required>
+    <input type="text" id = "refresh" placeholder="Last Name*" name="lastname" value="<%=typeof lastname != 'undefined' ? lastname : '' %>" autocomplete="off" required><br>
+    <input type="text"  id = "refresh" placeholder="Create a Username*" name="username" value="<%=typeof username != 'undefined' ? username : '' %>" autocomplete="off" required>
     <input type="text" name="email" placeholder="Email Address" value="<%=typeof email != 'undefined' ? email : '' %>" autocomplete="off" required><br>
     <input type="password" name="password" placeholder="Set a password" value="<%=typeof password != 'undefined' ? password : '' %>" autocomplete="off" required>
     <input type="password" name="confirmPassword" placeholder="Confirm password" value="<%=typeof confirmPassword != 'undefined' ? confirmPassword : '' %>" autocomplete="off" required><br>
     <button type="submit">Submit</button>
+    <input type='reset' value='Reset' name='reset'>   
+
+
+    <p>By creating an account you agree to our <button type ="button" onclick="getval()">Terms & Condition</button>.</p>
+
+    
   </form>
+</div>
+
 </body>
 </html>
