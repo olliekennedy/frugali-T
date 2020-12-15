@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm run test:unit && npm run cypress:open",
     "test:unit": "jest",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",

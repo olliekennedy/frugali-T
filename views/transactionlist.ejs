@@ -8,12 +8,13 @@
     <h1>Transactions List</h1>
     <ul>
       <%
+      console.log(transactions)
         var list = '';
         for (i = 0; i < transactions.length; i++) {
-          list += '<li>transactions.description</li>';
+          list += '<li>'+ transactions[i].description +'</li>';
         }
       %>
-      <%- transactions %>
+      <%- list %>
     </ul>
   </body>
 </html>
