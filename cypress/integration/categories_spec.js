@@ -1,6 +1,6 @@
 context('see categories heading', () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('/account')
   })
   it('shows categories heading', () => {
     cy.get('.categories').get('h2').should("contain", "Spill the tea")
