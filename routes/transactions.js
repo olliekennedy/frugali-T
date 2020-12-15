@@ -6,6 +6,10 @@ router.get('/', function(req, res, next) {
   res.render('newtransaction', { title: "Transactions" });
 })
 
+// router.get('/test', function(req, res, next) {
+//   res.render('transactionlist');
+// })
+
 router.get('/list', function(req, res) {
   var db = req.db;
   var collection = db.get("transaction");

@@ -30,7 +30,9 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'static')));
+// app.use(express.static(path.join(__dirname, 'static')));
+// app.use(express.static('static'))
+app.use('/', express.static('./'))
 
 // Make our db accessible to our router
 app.use(function(req, res, next){
