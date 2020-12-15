@@ -7,14 +7,14 @@
   <body>
     <h1>Transactions List</h1>
     <ul>
-      <%
-      console.log(transactions)
-        var list = '';
-        for (i = 0; i < transactions.length; i++) {
-          list += '<li>'+ transactions[i].description +'</li>';
-        }
-      %>
-      <%- list %>
+      <% transactions.forEach(function (transaction) { %>
+          <li>
+            <p>Description: <%= transaction.description %></p>
+            <p>Category: <%= transaction.category %></p>
+            <p>Amount: £<%= transaction.amount %></p>
+          </li>
+          <br>
+      <% }) %>
     </ul>
   </body>
 </html>
