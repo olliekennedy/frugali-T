@@ -1,6 +1,6 @@
 context("transactions", () => {
   beforeEach(() => {
-    cy.visit('/transactions')
+    cy.visit('/new-transaction')
   })
 
   it("should show a heading", () => {
@@ -10,7 +10,7 @@ context("transactions", () => {
 
 context("transactions form", () => {
   beforeEach(() => {
-    cy.visit('/transactions')
+    cy.visit('/new-transaction')
   })
 
   it("should show form heading", () =>{

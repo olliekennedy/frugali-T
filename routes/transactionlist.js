@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
   var db = req.db;
   var collection = db.get("transaction");
   collection.find({},{},function(e,docs){
-      res.render('transactionlist', {
+      res.render('newtransaction', {
           "transactions" : docs,
           title: "Transactions"
       });
@@ -36,7 +36,7 @@ router.post('/', function(req, res) {
       }
       else {
           // And forward to success page
-          res.redirect('/transaction-list')
+          res.redirect('/new-transaction')
       }
   });
 });
