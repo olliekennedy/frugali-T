@@ -1,4 +1,4 @@
-const budgetSchema = new mongoose.Schema({})
+const budgetSchema = new mongoose.Schema({
 Bills: number,
 Entertainment: number,
 Travel: number,
