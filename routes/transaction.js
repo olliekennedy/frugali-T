@@ -3,16 +3,28 @@ var router = express.Router();
 // var Transaction = require("../model/transaction");
 
 router.get('/', function(req, res) {
-  // var category = req.body.category;
+  var category = req.query.category;
+  console.log(category)
   var db = req.db;
   var collection = db.get("transaction");
-  collection.find({},{},function(e,docs){
+  if (category === "all" || category === undefined) {
+    collection.find({},{},function(e,docs){
       res.render('transaction', {
-          "transactions" : docs,
-          title: "Transactions"
+        "transactions" : docs,
+        title: "Transactions"
       });
-  });
+    });
+  } else {
+    collection.find({ category: category },{},function(e,docs){
+      res.render('transaction', {
+        "transactions" : docs,
+        title: "Transactions"
+      });
+    });
+  }
 })
+
+
 
 // router.get('/filter-transactions', function(req, res) {
 //   var db = req.db;
