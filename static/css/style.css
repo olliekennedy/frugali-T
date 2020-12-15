@@ -40,3 +40,21 @@ div.ProgressBar #container {
   width: 20px;
   height: 50px;
 }
+
+.style-page {
+  display: flex;
+  justify-content: center;
+}
+.income-form-div {
+  display: flex;
+  justify-content: center;
+}
+.fact-box {
+  display: grid;
+  position: relative;
+  float: right;
+  width: 300px;
+  border: 5px solid transparent;
+  padding: 50px;
+  margin: 20px;
+}
