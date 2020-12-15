@@ -1,26 +1,22 @@
 var express = require('express');
 var router = express.Router();
-// var Transaction = require("../model/transaction");
 
-router.get('/', function(req, res, next) {
-  res.render('newtransaction', { title: "Transactions" });
-})
-
-// router.get('/test', function(req, res, next) {
-//   res.render('transactionlist');
+//
+// router.get('/', function(req, res, next) {
+//   res.render('transactionlist', { });
 // })
-
-router.get('/list', function(req, res) {
+router.get('/', function(req, res) {
   var db = req.db;
   var collection = db.get("transaction");
   collection.find({},{},function(e,docs){
       res.render('transactionlist', {
-          "transactions" : docs
+          "transactions" : docs,
+          title: "Transactions"
       });
   });
-  })
+})
 
-router.post('/list', function(req, res) {
+router.post('/', function(req, res) {
   var db = req.db;
 
   var description = req.body.description;
@@ -40,10 +36,11 @@ router.post('/list', function(req, res) {
       }
       else {
           // And forward to success page
-          res.redirect('/transactions/list')
+          res.redirect('/transaction-list')
       }
   });
 });
+
 
 
 module.exports = router;
