@@ -96,4 +96,10 @@ router.get('/logout', (req, res) => {
   res.redirect('/signin');
 })
 
+// pie chart code 
+const oReq = new XMLHttpRequest();
+oReq.addEventListener("load", reqListener);
+oReq.open("GET", "https://zingchart-rest-api.gimix.me/api/data")
+oReq.send();
+
 module.exports = router;

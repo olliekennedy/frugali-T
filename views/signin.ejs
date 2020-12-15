@@ -4,14 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>frugali-TEA</title>
+  <link rel="stylesheet" type="text/css" href="static/css/homepage.css">
+  <link rel="stylesheet" type="text/css" href="static/css/signin.css">
+  
 </head>
 <body>
-  <h1>Sign in</h1>
+  <div class="container">
+  
   <%- include ('./partials/messages') %>
-  <form id="signin" action="/signin" method="POST">
-    <input type="text" placeholder="Username*" name="username" autocomplete="off" required><br>
-    <input type="password" name="password" placeholder="Set a password*" autocomplete="off" required><br>
-    <button type="submit">Submit</button>
+  <div class="card">
+  <form class="signin-form" id="signin" action="/signin" method="POST">
+    <h1 class="header1">Sign in</h1>
+    <input type="text" placeholder="Username*" name="username" autocomplete="off" class="form-input" required><br>
+    <input type="password" name="password" placeholder="Set a password*" autocomplete="off" class="form-input" required><br>
+    <button type="submit" class="button bouncy"><a style="animation-delay:0.07s">Submit</a></button>
   </form>
+</div>
+</div>
 </body>
 </html>

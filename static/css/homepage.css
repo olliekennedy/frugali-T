@@ -4,3 +4,9 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+* {
+  font-family: 'Muli', Helvetica, sans-serif;
+}
+div {
+  text-align: center;
+}
