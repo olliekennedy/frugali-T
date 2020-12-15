@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+// <reference types="cypress" />
 
 context('Check H1', () => {
   beforeEach(() => {
@@ -7,7 +7,16 @@ context('Check H1', () => {
 
   // https://on.cypress.io/interacting-with-elements
 
-  it('.type() - type into a DOM element', () => {
-    cy.get(".h1").should("contain", "frugali-TEA");
+  it('welcome to your landing page!', () => {
+    cy.get("h1").should("contain", "Welcome to frugali-TEA");
   })
+
+  it('signin', () => {
+    cy.get('button').should("contain", "Sign Up")
+  })
+
+  it('signup', () => {
+    cy.get('button').should("contain", "Sign In")
+  })
+  
 })
