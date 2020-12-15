@@ -68,4 +68,8 @@ function setRed() {
   body.style.backgroundColor = 'rgb(232, 202, 202)'
 }
 
+const getOut = document.getElementById('sign-out').onclick = function () {
+  location.href = './logout'
+};
+
 updateValue()

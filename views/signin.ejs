@@ -6,6 +6,8 @@
   <title>frugali-TEA</title>
 </head>
 <body>
+  <h1>Sign in</h1>
+  <%- include ('./partials/messages') %>
   <form id="signin" action="/signin" method="POST">
     <input type="text" placeholder="Username*" name="username" autocomplete="off" required><br>
     <input type="password" name="password" placeholder="Set a password*" autocomplete="off" required><br>
