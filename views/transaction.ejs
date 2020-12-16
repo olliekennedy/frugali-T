@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add User</title>
+    <link rel='stylesheet' type='text/css' href='static/css/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h3>Spill the TEA: Enter your transactions</h3>
+    <form id="newtransaction-form" name="new-transaction" method="post" action="/transaction">
+      <input id="description-input" type="text" placeholder="description" name="description" />
+            <label for="category-selector">Choose a categortea:</label>
+            <select id="category-selector" name="category">
+              <option value="bills">Bills</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="travel">Travel</option>
+              <option value="loans">Loans</option>
+              <option value="hobbies">Hobbies</option>
+              <option value="savings">Savings</option>
+              <option value="tea">TEA</option>
+            </select>
+            <input id="amount-input" type="text" placeholder="amount" name="amount" />
+      <button id="new_transaction_submit" type="submit">Submit</button>
+    </form>
+    <br>
+    <p>Filter transactions by categortea: <form id="newtransaction-form" name="new-transaction" method="get" action="/transaction">
+            <label for="category-selector">Choose a categortea:</label>
+            <select id="category-selector" name="category">
+              <option value="all">All</option>
+              <option value="bills">Bills</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="travel">Travel</option>
+              <option value="loans">Loans</option>
+              <option value="hobbies">Hobbies</option>
+              <option value="savings">Savings</option>
+              <option value="tea">TEA</option>
+            </select>
+      <button id="new_transaction_submit" type="submit">Submit</button>
+    </form></p>
+    <div class='previous-transactions'>
+      <ul>
+        <% transactions.forEach(function (transaction) { %>
+            <li>
+              <p>Description: <%= transaction.description %></p>
+              <p>Category: <%= transaction.category %></p>
+              <p>Amount: £<%= transaction.amount %></p>
+            </li>
+            <br>
+        <% }) %>
+      </ul>
+    </div>
+
+
+  </body>
+</html>

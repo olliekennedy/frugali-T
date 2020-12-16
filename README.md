@@ -17,7 +17,7 @@ We are just a group of frugal tea-lovers. The less money you spend each month, t
   * bills, groceries, entertainment, travel, loans, hobbies, savings
   * amount can be set against each of these
 * net
-  
+
 ## Iteration 2
 * login & authentication (add the notion of a user)
   * check the user knows how to make tea
@@ -100,20 +100,39 @@ npm run start:test
 This starts the server on port `3030` and uses the `acebook_test` MongoDB database,
 so that integration tests do not interact with the development server.
 
-#### Database setup 
+#### Database setup
 ```
 Mongo
 
-    use frugali_TEA_test 
-    db.createCollection('budget')
-    db.budget.insert({
-     Bills: 1500,
-     Entertainment: 250,
-     Travel: 250,
-     Loans: 250,
-     Tea: 250,
-     Hobbies: 250,
-     Savings: 250
-    })
+use frugali_TEA_test
+db.createCollection('budget')
+db.budget.insert({
+ Bills: 1500,
+ Entertainment: 250,
+ Travel: 250,
+ Loans: 250,
+ Tea: 250,
+ Hobbies: 250,
+ Savings: 250
+})
 
-    ```
+```
+```
+use frugali_TEA
+db.createCollection('transaction')
+db.transaction.insert({
+ Description: 'YORKSHIRE GOLD',
+ Category: 'TEA',
+ Amount: 5
+})
+```
+
+```
+use frugali_TEA_test
+db.createCollection('transaction')
+db.transaction.insert({
+ Description: 'YORKSHIRE GOLD',
+ Category: 'TEA',
+ Amount: 5
+})
+```

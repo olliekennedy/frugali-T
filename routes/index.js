@@ -58,7 +58,7 @@ router.post('/signup', (req, res) => {
             email: email,
             password: password,
             confirmPassword: confirmPassword})
-          bcrypt.genSalt(10, (err, salt) => 
+          bcrypt.genSalt(10, (err, salt) =>
           bcrypt.hash(newUser.password,salt,
             (err,hash) => {
               if (err) throw err;
@@ -73,7 +73,7 @@ router.post('/signup', (req, res) => {
             }));
           };
         });
-      }  
+      }
     });
 
 router.post('/signin', (req, res, next) => {
@@ -96,7 +96,7 @@ router.get('/logout', (req, res) => {
   res.redirect('/signin');
 })
 
-// pie chart code 
+// pie chart code
 // const oReq = new XMLHttpRequest();
 // oReq.addEventListener("load", reqListener);
 // oReq.open("GET", "https://zingchart-rest-api.gimix.me/api/data")

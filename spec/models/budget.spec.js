@@ -1,16 +1,16 @@
 var mongoose = require('mongoose');
 require ('../mongodb_helper.js')
-var Budget =  require ('../../model/frugali-TEA')
+var Budget = require ('../../model/budget')
 
 describe ("budget model", function(){
   beforeEach (function(done){
-    mongoose.connection.collection("budget").drop(function(){
-      done();
-    });
+    // mongoose.connection.collection("budget").drop(function(){
+    //   done();
+    // });
   });
   //test BudgetSchema
   it("has a category", function(){
-    var budget = new Budget({
+    const budget = new Budget({
       bills: "100",
       entertainment: "100",
       travel: "100",
@@ -28,29 +28,34 @@ describe ("budget model", function(){
     expect(budget.savings).toEqual(100);
   });
   it("it can save allowances",function(){
-    var budget = new Budget({
+    const budget = new Budget({
       bills: "100",
-      entertainment: "100",
-      travel: "100",
-      loans: "100",
-      tea: "100",
-      hobbies: "100",
-      savings: "100"
-      });
-      budget.save(function(err){
-        expect(err).toBeNull();
-        Budget.find(function(err, budget){
-          expect(err).toBeNull();
-          expect(budget[0]).toMatchObject({
-            bills: "100",
-      //      entertainment: "100",
-//            travel: "100",
-//            loans: "100",
-  //          tea: "100",
-  //          hobbies: "100",
-  //          savings: "100"
-          });
-        });
-      });
+      // entertainment: "100",
+      // travel: "100",
+      // loans: "100",
+      // tea: "100",
+      // hobbies: "100",
+      // savings: "100"
+    });
+    budget.save()
+    // console.log(Budget.find())
+    Budget.find(function(budget) {
+      console.log("CHICKENS")
+      console.log(budget)
+      console.log("CHICKENS")
+    })
+    expect(Budget.find().toEqual({ bills : 100}))
+
+//     Budget.find(function(budget){
+//       expect(budget[0]).toMatchObject({
+//         bills: "100",
+//   //      entertainment: "100",
+// //            travel: "100",
+// //            loans: "100",
+// //          tea: "100",
+// //          hobbies: "100",
+// //          savings: "100"
+//       });
+//     });
   })
 })

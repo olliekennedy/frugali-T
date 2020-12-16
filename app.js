@@ -1,6 +1,9 @@
+var createError = require('http-errors');
 const express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 const router = express.Router();
-const app = express();
 const ejs = require('ejs');
 const port = 3000;
 const mongoose = require('mongoose');
@@ -12,6 +15,10 @@ require("./config/passport")(passport);
 
 const expressEjsLayout = require('express-ejs-layouts');
 
+// monk connection
+var monk = require('monk');
+var dbMonk = monk('localhost:27017/frugali_TEA')
+
 // mongoose
 mongoose.connect('mongodb://localhost/frugali_TEA', {useNewUrlParser: true});
 
@@ -22,11 +29,20 @@ db.once('open', function() {
 //console.log ("we're connected!")
 });
 
-app.set('view engine', 'ejs');
-app.use("/", express.static('./'));
-// app.use(expressEjsLayout);
+var indexRouter = require('./routes/index');
+var transactionRouter = require("./routes/transaction");
 
-app.use(express.urlencoded({extended : false}));
+const app = express();
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use("/", express.static('./'));
+
 app.use(session({
   secret: 'secret',
   resave: true,
@@ -42,9 +58,33 @@ app.use((req,res,next)=> {
   next();
 })
 
-app.use('/', require('./routes/index.js'));
+// Make our monk db accessible to our router
+app.use(function(req, res, next){
+  req.dbMonk = dbMonk;
+  next();
+});
 
+app.use("/", indexRouter);
+app.use("/transaction", transactionRouter);
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
+
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
 // console.log('test')
 app.listen(port, () => {
   console.log(`App listening on: ${port}`);
 });
+
+module.exports = app;
