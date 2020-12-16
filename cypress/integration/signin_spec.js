@@ -7,61 +7,52 @@ context('Ability to sign in', () => {
     cy.get('h1').should("contain", "Sign in")
   });
   
-  it('Logging in', () => {
-    const username = 'test'
+  it('Log in', () => {
+    const username = 'happysocks'
     const password = '123456'
 
-    context('unauthorized', () => {
-      it('it redirects to the account page', () => {
-        cy.visit('/account')
-        cy.get('p').should(
+    context('if wrong log in details', () => {
+      it('redirect to the /signin page', () => {
+        cy.visit('/signin')
+        cy.get('msg').should(
           'contain', 
-          'Please fill in all the fields'
+          'That email is not registered'
         )
-        cy.url().should('include', 'unauthorised')
+        cy.url().should('include', '/singin')
       })
-
       it('its redirected using cy.request', () => {
         cy.request({
           url: '/account',
           followRedirect: false,
         }).then ((resp) => {
           expect(resp.status).to.eq(302)
-
-          expect(resp.redirectToUrl).to.eq('http://localhost:3000/signup')
+          expect(resp.redirectToUrl).to.eq('http://localhost:3000/signin')
         })
       })
     })
-
     context('form submission', function () {
-      beforeEach(function () {
+      beforeEach( () => {
         cy.visit('/signin')
       })
-  
-      it('displays errors on signin', function () {
-        
-        cy.get('input[username=username]').type('testTea')
+      it('displays errors on signin', function () { 
+        cy.get('input[username=username]').type('happysocksTea')
         cy.get('input[username=password]').type('123456{enter}')
   
         cy.get('p.error')
         .should('be.visible')
         .and('contain', 'Please fill in all the fields')
-  
         cy.url().should('include', '/signin')
       })
-  
       it('redirects to /account on success', function () {
         cy.get('input[username=username]').type(username)
         cy.get('input[password=password]').type(password)
         cy.get('form').submit()
   
         cy.url().should('include', '/account')
-        cy.get('input').should('contain', 'test')
+        cy.get('input').should('contain', 'happysocks')
   
-        // and our cookie should be set to 'cypress-session-cookie'
         cy.getCookie('cypress-session-cookie').should('exist')
       })
     })
-    
   })
 })
