@@ -3,8 +3,6 @@ const router = express.Router();
 const User = require('../model/user')
 const bcrypt = require('bcrypt');
 const passport = require('passport');
-// require("./config/passport")(passport)
-
 
 router.get('/', (req, res) => {
   res.render('homepage');
@@ -30,10 +28,10 @@ router.post('/signup', (req, res) => {
     errors.push({msg : "Please fill in all the fields"})
   }
   if(password !== confirmPassword) {
-    errors.push({msq : "passwords dont match"});
+    errors.push({msg : "passwords dont match"});
   }
   if (password.length < 6) {
-    errors.push({msq : "password atleast 6 characters"});
+    errors.push({msg : "password atleast 6 characters"});
   }
   if (errors.length > 0) {
     res.render('signup', {
