@@ -1,6 +1,6 @@
 context('Have random tips', () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('/account')
   })
 
   it('should show a random tip after every refresh', () => {
