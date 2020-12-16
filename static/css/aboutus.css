@@ -1,15 +1,16 @@
 body {
   margin: 0;
   font-family: 'Muli', Helvetica, sans-serif;
-  color: black;
+  color: #FFEECC;
+  padding-bottom: 650px;
+  background-color: #5C5953;
 }
 
 #bannerimage {
   width: 100%;
   background-image: url("images/teapeople.jpeg");
-  height: 520px;
+  height: 220px;
   background-position: top;
-
 }
 
 * {
@@ -19,7 +20,7 @@ body {
 .header {
   padding: 25px;
   text-align: center;
-
+  font-size: 40px;
 }
 
 [class*="col-"]{
