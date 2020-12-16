@@ -10,15 +10,16 @@
 </head>
 <body>
   <div class="container">
-  <div class="card">
-  <%- include ('./partials/messages') %>
-  <form class="signin-form" id="signin" action="/signin" method="POST">
-    <h1 class="header1">Sign in</h1>
-    <input type="text" placeholder="Username*" name="username" autocomplete="off" class="form-input" required><br>
-    <input type="password" name="password" placeholder="Set a password*" autocomplete="off" class="form-input" required><br>
-    <button type="submit" class="button bouncy"><a style="animation-delay:0.07s">Submit</a></button>
-  </form>
-</div>
-</div>
+  
+    <%- include ('./partials/messages') %>
+    <div class="card">
+      <form class="signin-form" id="signin" action="/signin" method="POST">
+        <h1 class="header1">Sign in</h1>
+        <input type="text" placeholder="Username*" name="username" autocomplete="off" class="form-input" required><br>
+        <input type="password" name="password" placeholder="Set a password*" autocomplete="off" class="form-input" required><br>
+        <button type="submit" class="button bouncy"><a style="animation-delay:0.07s">Submit</a></button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
