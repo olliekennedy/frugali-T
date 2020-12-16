@@ -99,3 +99,21 @@ npm run start:test
 ```
 This starts the server on port `3030` and uses the `acebook_test` MongoDB database,
 so that integration tests do not interact with the development server.
+
+#### Database setup 
+```
+Mongo
+
+    use frugali_TEA_test 
+    db.createCollection('budget')
+    db.budget.insert({
+     Bills: 1500,
+     Entertainment: 250,
+     Travel: 250,
+     Loans: 250,
+     Tea: 250,
+     Hobbies: 250,
+     Savings: 250
+    })
+
+    ```
