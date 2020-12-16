@@ -1,6 +1,6 @@
 context('Check salary', () =>{
   beforeEach(() => {
-    cy.visit("/")
+    cy.visit("/account")
   })
   it('has default value of £1000', function() {
     cy.get('#income-input').should('have.value', '1000')

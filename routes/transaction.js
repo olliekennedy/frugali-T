@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res) {
   var category = req.query.category;
   console.log(category)
-  var db = req.db;
+  var db = req.dbMonk;
   var collection = db.get("transaction");
   if (category === "all" || category === undefined) {
     collection.find({},{},function(e,docs){
@@ -24,30 +24,8 @@ router.get('/', function(req, res) {
   }
 })
 
-
-
-// router.get('/filter-transactions', function(req, res) {
-//   var db = req.db;
-//
-//   var category = req.body.category;
-//
-//   var collection = db.get('transaction');
-//   collection.find({ "category" : category },{},function(e,docs){
-//       res.render('newtransaction', {
-//           "transactions" : docs,
-//           title: "Transactions"
-//       });
-//   });
-//
-//   var transactions = collection.find({
-//       "category" : category
-//   });
-//
-//
-// });
-
 router.post('/', function(req, res) {
-  var db = req.db;
+  var db = req.dbMonk;
 
   var description = req.body.description;
   var category = req.body.category;

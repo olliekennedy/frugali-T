@@ -1,6 +1,6 @@
 context('Check outgoings', () =>{
   beforeEach(() => {
-    cy.visit("/")
+    cy.visit("/account")
   })
   it('shows the sum total of different categories in outgoings', function() {
     cy.get('#bills-input').type('10000');

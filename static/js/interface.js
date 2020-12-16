@@ -9,7 +9,11 @@ const outG = document.getElementById('outgoings-output');
 function updateValue(e) {
   updateOutgoing()
   net.textContent = `£${+income.value - +outG.textContent.substring(1)}`;
+  var maximum = income.value
+  balance = income.value -outG.textContent.substring(1)
+  bar.animate(  balance / maximum );
   updateColor()
+const progressbar = document.getElementById('progressbar');
 };
 
 const allOutgoings = document.querySelector('#outgoings').querySelectorAll('input')
@@ -54,17 +58,51 @@ function updateColor() {
 
 function setGreen() {
   net.style.color = "rgb(0, 0, 0)"
-  body.style.backgroundColor = 'rgb(218, 240, 220)'
 }
 
 function setOrange() {
   net.style.color = "rgb(255, 165, 0)"
-  body.style.backgroundColor = 'rgb(237, 225, 202)'
 }
 
 function setRed() {
   net.style.color = "rgb(255, 0, 0)"
-  body.style.backgroundColor = 'rgb(232, 202, 202)'
 }
+
+var bar = new ProgressBar.SemiCircle('#ProgressBar', {
+  easing: 'easeInOut',
+  strokeWidth: 6,
+  color: '#FFEA82',
+  trailColor: '#eee',
+  trailWidth: 1,
+  easing: 'easeInOut',
+  duration: 1400,
+  svgStyle: null,
+  text: {
+    value: '',
+    alignToBottom: false
+  },
+  from: {color: '#ff0000'},
+  to: {color:'#009900'},
+  // Set default step function for all animate calls
+  step: (state, bar) => {
+
+    bar.path.setAttribute('stroke', state.color);
+    //var.path.setAttribute('stroke',state.color)
+    var value = Math.round(bar.value() );
+    // if (value === 0) {
+    //   bar.setText('');
+    // } else {
+    //   bar.setText(value);
+    // }
+    //
+    // bar.text.style.color = state.color;
+  }
+});
+bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar.text.style.fontSize = '2rem';
+
+const getOut = document.getElementById('sign-out').onclick = function () {
+  location.href = './logout'
+};
 
 updateValue()

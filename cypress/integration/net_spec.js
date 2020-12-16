@@ -1,6 +1,6 @@
 context('Check net', () =>{
   beforeEach(() => {
-    cy.visit("/")
+    cy.visit("/account")
   })
   it('shows income minus outgoings in the net', function() {
     cy.get('#savings-input').type('900');
