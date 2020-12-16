@@ -1,6 +1,6 @@
 context('Have random facts', () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('/account')
   })
 
   it('should show a random fact after every refresh', () => {

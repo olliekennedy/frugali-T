@@ -9,9 +9,6 @@ const outG = document.getElementById('outgoings-output');
 function updateValue(e) {
   updateOutgoing()
   net.textContent = `£${+income.value - +outG.textContent.substring(1)}`;
-  console.log(income.value)
-  console.log(outG.textContent.substring(1))
-  console.log(income.value - outG.textContent.substring(1))
   var maximum = income.value
   balance = income.value -outG.textContent.substring(1)
   bar.animate(  balance / maximum );
@@ -71,7 +68,6 @@ function setRed() {
   net.style.color = "rgb(255, 0, 0)"
 }
 
-
 var bar = new ProgressBar.SemiCircle('#ProgressBar', {
   easing: 'easeInOut',
   strokeWidth: 6,
@@ -93,17 +89,20 @@ var bar = new ProgressBar.SemiCircle('#ProgressBar', {
     bar.path.setAttribute('stroke', state.color);
     //var.path.setAttribute('stroke',state.color)
     var value = Math.round(bar.value() );
-    if (value === 0) {
-      bar.setText('');
-    } else {
-      bar.setText(value);
-    }
-
-    bar.text.style.color = state.color;
+    // if (value === 0) {
+    //   bar.setText('');
+    // } else {
+    //   bar.setText(value);
+    // }
+    //
+    // bar.text.style.color = state.color;
   }
 });
 bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
 bar.text.style.fontSize = '2rem';
 
+const getOut = document.getElementById('sign-out').onclick = function () {
+  location.href = './logout'
+};
 
 updateValue()

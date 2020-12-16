@@ -1,0 +1,17 @@
+body {
+    background-image: url("https://hips.hearstapps.com/countryliving.cdnds.net/18/06/1517917517-tea-bag.jpg?crop=0.500xw:1.00xh;0.375xw,0&resize=480:*");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container2{
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
