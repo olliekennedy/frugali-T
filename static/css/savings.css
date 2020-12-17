@@ -1,79 +1,63 @@
 body {
-  margin: 0;
   font-family: 'Muli', Helvetica, sans-serif;
   color: #FFB366;
-  padding-bottom: 850px;
+  padding-bottom: 100px;
   background-color: #FFFBE6;
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
-}
+
 #bannerimage {
   width: 100%;
-  background-image: url("images/savings-banner.jpeg");
-  height: 350px;
+  background-image: url("images/savings-banner.png");
+  height: 280px;
   background-position: top;
-}
-* {
-  box-sizing: border-box;
 }
 
 .header {
   padding: 25px;
-  text-align: center;
+  text-align: right;
   font-size: 40px;
 }
-
-[class*="col-"]{
-  border: 2px solid #1C6EA4;
-  float: center;
-  padding: 15px;
-  text-align: center;
-  font-size: 46px;
-
+* {
+  box-sizing: border-box;
 }
-.col-2 { width: 100% }
-.col-3 { width: 100% }
-.col-4 { width: 100% }
-
 .container {
-  position: center;
-  margin: 200px;
-  padding: 0;
+  height: 70vh;
 }
+[class*="col-"]{
+  float: left;
+  padding: 15px;
+}
+
+.col-1 { width: 7%; }
+.col-2 { width: 30%; }
+.col-3 {
+  /* width: 53%; */
+  font-size: 32px;
+}
+
 .pot{
-  position: auto;
+  position: absolute;
   animation: swing ease-in-out 1s infinite alternate;
 }
 .pottop {
   position: absolute;
   background-color: #2a570e;
-  width: 300px;
-  height: 40px;
+  width: 200px;
+  height: 100px;
   border: 1px solid #2a570e;
   border-radius: 30px 30px 30px 30px;
 
 }
 .potbottom {
   background-color: #2a570e;
-  width: 200px;
+  width: 220px;
   height: 200px;
   position: absolute;
   border-radius: 0 0 80px 80px;
   left: 50px;
 }
-.clover img {
+.shadow {
   position: absolute;
-  width:240px;
-  height:200px;
-  left: 35px;
-  animation: spin 8s linear infinite;
-
-}
-/* .shadow {
-  position: auto;
   width: 200px;
   height: 40px;
   top: 200px;
@@ -84,7 +68,7 @@ body {
   filter: blur(1px);
   opacity: 0.5;
   animation: bounceshadow alternate infinite 400ms 40ms ease-in-out;
-} */
+}
 .coins {
   position: absolute;
 }
@@ -96,7 +80,7 @@ body {
   border-radius: 50%;
   animation: coinbounce 2s alternate infinite ;
   z-index: -1;
-  left: 45px;
+  left: 55px;
 }
 .coin2 {
   position: absolute;
