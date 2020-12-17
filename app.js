@@ -32,7 +32,7 @@ db.once('open', function() {
 var indexRouter = require('./routes/index');
 var transactionRouter = require("./routes/transaction");
 var aboutusRouter = require("./routes/aboutus");
-
+var contactusRouter = require("./routes/contactus");
 
 const app = express();
 
@@ -69,6 +69,7 @@ app.use(function(req, res, next){
 app.use("/", indexRouter);
 app.use("/transaction", transactionRouter);
 app.use("/about-us", aboutusRouter);
+app.use("/contact-us", contactusRouter);
 
 
 // catch 404 and forward to error handler
