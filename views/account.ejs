@@ -21,40 +21,36 @@
 
   <link rel="stylesheet" type="text/css" href="static/css/style.css">
   <div class = "row5">
-    <h1>frugali-TEA</h1>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" id="sign-out">Log Out</button>
+    <h1 class="actual_heading1">frugali-TEA</h1>
   </div>
-  <div id="ProgressBar"></div>
-  <script src="static/js/progressbar.js"></script>
-  <div class="row2">
+  <div id="ProgressBar">
 
+  </div>
+  <form class="income-form">
+    <h1>Income: £ <input type="number" id="income-input" value="1000" name="income" maxlength="5" size="5"> /month
+    <p>Outgoings: <span id="outgoings-output"></span></p>
+    <p>Net:  <span id="net-output"></span></p></h1>
+  </form>
+  <script src="static/js/progressbar.js"></script>
   <div class="fact-box">
     <div class="random-facts">
-      <h2><label for="sip-alish"><b>Sip-a-licious Tea facts!</b></label></h2>
+      <h2><label for="random-fact"><b>Sip-a-licious Tea facts!</b></label></h2>
         <p id="random-fact"></p>
       <div class="random-tips">
-        <p><b>Tip of the day</b></p>
+        <h2><b>Sip of the day</b></h2>
         <p id="random-tip"></p>
-      
+
       </div>
     </div>
   </div>
+  <div class="row2">
+
+
 </div>
-<div class="row3">
-    <form class="income-form">
-      <h1>Income: £ <input type="number" id="income-input" value="1000" name="income"> /month
-      <p>Net:  <span id="net-output"></span></p></h1>
-    </form>
+<div id='financials'>
 </div>
-  <div class="row1">
-    <h2>
-      Spill the tea
-    </h2>
-  </div>
-  <div class="row4">
-    <h2>Outgoings: <span id="outgoings-output"></span></h2>
-   </div>
-    <div class="row6">
+<div id="outgoings-div">
+  <h2>Spill the tea</h2>
   <form id="outgoings">
     <div>
       <label for='bills-input'>Bills: </label><br>
@@ -88,18 +84,13 @@
       <label for='tea-input'>TEA: </label><br>
       <input id="tea-input" placeholder="enter budget" type="number">
     </div>
-    
-    
   </form>
-  
-  </div>
-
+</div>
 
   <div class="container">
     <canvas id="chart"></canvas>
   </div>
 
-  <!-- <script src="static/js/homepage.js"></script> -->
   <script src="static/js/interface.js"></script>
 </body>
 </html>

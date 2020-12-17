@@ -1,4 +1,10 @@
+.actual_heading1 {
+  font-size: 42px;
+}
 
+body {
+  background-color: #FFFBE6;
+}
 
 div.income-form-div {
   font-family: 'Muli', Helvetica, sans-serif;
@@ -50,7 +56,7 @@ div.ProgressBar #container {
   justify-content: center;
 }
 .fact-box {
-  display: grid;
+  display: flex;
   position: relative;
   float: right;
   width: 300px;
@@ -58,23 +64,23 @@ div.ProgressBar #container {
   padding: 50px;
   margin: 20px;
 }
-.row1{
+/* .row1{
 
   display: flex;
   align-content: center;
   justify-content: center;
   flex-direction: row;
 
-}
+} */
 button {
-  
-  
+
+
   height: 25px;
   width: 60px;
   color: deepskyblue;
   margin-top: 20px;
 }
-.row2{
+/* .row2{
   color: brown;
   display: flex;
   align-content: center;
@@ -100,7 +106,7 @@ button {
   display: flex;
   align-content: center;
   justify-content: center;
-  background-color:darkolivegreen;
+  background-color: #ff9966;
     flex-direction: row;
 }
 .row6{
@@ -109,10 +115,59 @@ button {
   justify-content: center;
   background-color:cornflowerblue;
   flex-direction: row;
-}
+} */
 input{
   width: 300px;
 }
 label{
   width: 300px;
 }
+
+.income-form {
+    display: flex;
+    position: absolute;
+    top: 280px;
+    justify-content: center;
+    margin: 0;
+    border: none;
+    /* width: 100%;
+    height: 100%; */
+    /* background-color: rgba(013, 130, 230, 0.5); */
+    /* cursor: not-allowed; */
+}
+/* #financials {
+    display: grid;
+    position: absolute;
+    top: 400px;
+    justify-content: center;
+    margin: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    cursor: not-allowed;
+} */
+
+#outgoings-heading {
+    display: grid;
+    position: absolute;
+    top: 440px;
+    justify-content: center;
+    margin: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    /* cursor: not-allowed; */
+}
+
+#outgoings-div {
+  width: 80%;
+  border-left: 15px transparent;
+  padding: 0px;
+  margin-left: 100px;
+}
+
+/* div#financials {
+  display: flex;
+  justify-content: center;
+
+} */
