@@ -58,3 +58,61 @@ div.ProgressBar #container {
   padding: 50px;
   margin: 20px;
 }
+.row1{
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+
+}
+button {
+  
+  
+  height: 25px;
+  width: 60px;
+  color: deepskyblue;
+  margin-top: 20px;
+}
+.row2{
+  color: brown;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: burlywood;
+}
+
+.row3{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color:cornflowerblue;
+  flex-direction: row;
+}
+.row4{
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  background-color:cyan;
+  flex-direction: row;
+}
+.row5{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color:darkolivegreen;
+    flex-direction: row;
+}
+.row6{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color:cornflowerblue;
+  flex-direction: row;
+}
+input{
+  width: 300px;
+}
+label{
+  width: 300px;
+}
