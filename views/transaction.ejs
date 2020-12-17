@@ -3,30 +3,46 @@
   <head>
     <title>Add User</title>
     <link rel='stylesheet' type='text/css' href='static/css/style.css' />
+    <link rel='stylesheet' type='text/css' href='static/css/signup.css' />
+    
   </head>
   <body>
-    <h1><%= title %></h1>
-    <h3>Spill the TEA: Enter your transactions</h3>
+    
+    <div class="top-section">
+    
+    <div class="container">
+      <div class="card">
+    <h1 class="header1"><%= title %></h1>
+    <h3 class="text">Spill the TEA: Enter your transactions</h3>
     <form id="newtransaction-form" name="new-transaction" method="post" action="/transaction">
-      <input id="description-input" type="text" placeholder="description" name="description" />
-            <label for="category-selector">Choose a categortea:</label>
-            <select id="category-selector" name="category">
-              <option value="bills">Bills</option>
-              <option value="entertainment">Entertainment</option>
-              <option value="travel">Travel</option>
-              <option value="loans">Loans</option>
-              <option value="hobbies">Hobbies</option>
-              <option value="savings">Savings</option>
-              <option value="tea">TEA</option>
+      <input id="description-input" type="text" placeholder="description" name="description"  class="trans-input" />
+            <label class="transaction-selector" for="category-selector">Choose a categortea:</label>
+            <select class="select-transaction" id="category-selector" name="category">
+              <option class="p" value="bills">Bills</option>
+              <option class="p" value="entertainment">Entertainment</option>
+              <option class="p" value="travel">Travel</option>
+              <option class="p" value="loans">Loans</option>
+              <option class="p" value="hobbies">Hobbies</option>
+              <option class="p" value="savings">Savings</option>
+              <option class="p" value="tea">TEA</option>
             </select>
-            <input id="amount-input" type="text" placeholder="amount" name="amount" />
-      <button id="new_transaction_submit" type="submit">Submit</button>
+            <input id="amount-input" type="text" placeholder="amount" name="amount" class="trans-input" />
+      <button id="new_transaction_submit" type="submit" class="button bouncy">Submit</button>
     </form>
+  </div>
+
+</div>
+</div>
     <br>
-    <p>Filter transactions by categortea: <form id="newtransaction-form" name="new-transaction" method="get" action="/transaction">
-            <label for="category-selector">Choose a categortea:</label>
-            <select id="category-selector" name="category">
-              <option value="all">All</option>
+    <div> <img class="backimage"></div>
+   
+    <div class="container bottom">
+      <div class="card">
+    <p class="p">Filter transactions by categortea: <form id="newtransaction-form" name="new-transaction" method="get" action="/transaction">
+            <label for="category-selector"class="text" >Choose a categor<strong>Tea:</strong></label>
+            <div class="custom-select" style="width: 200px;">
+            <select class="category-selector" id="category-selector" name="category">
+              <option class="" value="all">All</option>
               <option value="bills">Bills</option>
               <option value="entertainment">Entertainment</option>
               <option value="travel">Travel</option>
@@ -35,20 +51,29 @@
               <option value="savings">Savings</option>
               <option value="tea">TEA</option>
             </select>
-      <button id="new_transaction_submit" type="submit">Submit</button>
+            </div>
+      <button id="new_transaction_submit" class="button bouncy" type="submit">Submit</button>
     </form></p>
-    <div class='previous-transactions'>
-      <ul>
+  </div>
+</div>
+</div>
+
+
+
+    <div class="grid-container" >
+      <ul class="grid-items" >
         <% transactions.forEach(function (transaction) { %>
-            <li>
-              <p>Description: <%= transaction.description %></p>
-              <p>Category: <%= transaction.category %></p>
-              <p>Amount: £<%= transaction.amount %></p>
+            <li class="testrow"  >
+              <p> <strong> Description:</strong> <%= transaction.description %></p>
+              <p> <strong> Category: </strong> <%= transaction.category %></p>
+              <p> <strong> Amount: </strong>  £<%= transaction.amount %></p>
             </li>
             <br>
         <% }) %>
       </ul>
     </div>
+  </div>
+</div>
 
 
   </body>
