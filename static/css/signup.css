@@ -1,17 +1,253 @@
 body {
-    background-image: url("https://hips.hearstapps.com/countryliving.cdnds.net/18/06/1517917517-tea-bag.jpg?crop=0.500xw:1.00xh;0.375xw,0&resize=480:*");
+    background-image: url("frulet.jpg");
+    border-radius: 50%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
+* {
+    font-family: 'Muli', Helvetica, sans-serif;
+  }
+  .backimage{
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
 
+  }
+  .backimage:hover{
+    opacity:0;
+  }
 .container{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .container2{
-    /* display: flex; */
+    display: flex; 
     align-items: center;
     justify-content: center;
+}
+.header1{
+    font-family: 'Muli', Helvetica, sans-serif;
+    font-size: 50pt;
+    align-self: center;
+    align-content: center;
+    letter-spacing: -2px;
+    /* border-bottom: 2px solid black; */
+    text-shadow: 3px 3px white;
+    text-align: center;
+  }
+  .text{
+      align-items:  center;
+  }
+  .trans-input {
+    width: 25%;
+    padding: 12px;
+    border: 1px solid white;
+    display: grid inline-grid;
+  }
+  .select-transaction{
+    color: #ffffff;
+    padding: 0.35em 1.2em;
+    border:0.1em solid #ffffff;
+    margin:0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: transparent;
+    display: inline-block;;
+    align-content: center;
+    align-self: center;
+    font-size: 24px;
+
+  }
+
+   .grid-container{
+    grid-template-columns: 1fr 1fr 40px 2fr;
+    grid-column-gap: 10px;
+    grid-template-rows: 100px 200px 200px;
+    
+}    
+
+.grid-items {
+    /* display: inline-grid; */
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    border:white 1px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 15px;
+    
+}
+
+.testrow {
+    /* list-style: none; */
+    display: table-cell;
+    border: 1px solid white;
+    color: white;
+    font-weight: 300;
+    padding: 2px 6px;
+
+}
+
+/* .grid-item{
+    border: 1px solid pink;
+} */ */
+.container{
+    width: 800px;
+    height: 200px;
+    padding: 12px;
+    position: absolute;
+   
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: center;
+}
+  .card{
+  
+    top: 15px;
+    padding: 5px;
+   
+} 
+
+.filter-container{
+    width: 50px;
+    height: 200px;
+    padding: 12px;
+    float: right;
+    position: absolute;
+  
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: center;
+
+}
+.button {
+    color: #ffffff;
+    padding: 0.35em 1.2em;
+    border:0.1em solid #ffffff;
+    margin:0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: transparent;
+    display: inline-block;
+    align-content: center;
+    align-self: center;
+    font-size: 24px;
+    position: inherit;
+   
+}
+  button:hover{
+      color: #000000;
+      background-color: #ffffff;
+  }
+
+  @media all and (max-width:30em) {
+      .button{
+          display: block;
+          margin: 0.4em auto;
+      }
+  }
+
+ .bouncy {
+    animation:bouncy 5s infinite linear;
+    position: relative;  
+  }
+
+  @keyframes bouncy {
+      0%{top:0em}
+      40%{top:0em}
+      43%{top:-0.9em}
+      46%{top:0em}
+      48%{top:-0.4em}
+      50%{top:0em}
+      100%{top: 0em;}
+
+  } 
+  .custom-select {
+    position: relative;
+      display: block;
+      padding: 10px;
+      cursor: pointer;
+    
+  }
+  p{
+      font-weight: 500;
+      color: white;
+  }
+.section1{
+   display: block;
+   overflow-y: scroll;
+}
+
+  .custom-select .category-selector{
+    color: #ffffff;
+    padding: 0.35em 1.2em;
+    border: 1px solid #ffffff;
+    margin:0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: transparent;
+    display: inline-block;
+    align-content: center;
+    align-self: center;
+    font-size: 24px;
+     
+  }
+  .text{
+      color: white;
+      font-weight: 500;
+      text-shadow: 0 0 3px black;
+  }
+  .p{
+      color: white;
+      font-weight: 500;
+  }
+  .custom-select select {
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      line-height: 20px;
+  }
+  .category-selector{
+      width: 250px;
+      display: inline-block;
+      border-radius: 3px;
+
+      position: inherit;
+      text-align: left;  
+      background-color: transparent;
+      border: thin red; 
+  }
+ 
+ .strong{
+     font-weight: 500;
+
+ }
+ .container .bottom{
+    width: 100vh;
+    height: 100vw;
+ }
+ #bar-chart{
+    min-height: 250px;}
+
+  /* .trans-input {
+    width: 15%;
+    padding: 12px;
+    border: 1px solid white;
+    resize: vertical;
+   
 }

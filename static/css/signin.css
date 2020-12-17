@@ -95,6 +95,15 @@ form {
 
 
 }
+
+.trantest2{
+    margin: 0 auto;
+    text-align: center;
+}
+.trantest {
+    display: inline-block;
+    vertical-align: top;
+}
   /* .container .card{
       position: relative;
   }
