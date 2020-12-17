@@ -20,18 +20,21 @@
 
   <link rel="stylesheet" type="text/css" href="static/css/style.css">
   <div class = "row5">
-    <h1 class="actual_heading1">frugali-TEA</h1>
+    <h1 class="header1">Frugali-TEA</h1>
   </div>
   <div id="ProgressBar">
 
   </div>
+  <div>
   <form class="income-form">
-    <h1>Income: £ <input type="number" id="income-input" value="1000" name="income" maxlength="5" size="5"> /month
+    <h1>Income: £ <input class="account-input2"  type="number" id="income-input" value="1000" name="income" maxlength="5" size="5"> /month
     <p>Outgoings: <span id="outgoings-output"></span></p>
     <p>Net:  <span id="net-output"></span></p></h1>
   </form>
+</div>
   <script src="static/js/progressbar.js"></script>
-  <div class="fact-box">
+
+  <div class="fact-box card">
     <div class="random-facts">
       <h2><label for="random-fact"><b>Sip-a-licious Tea facts!</b></label></h2>
         <p id="random-fact"></p>
@@ -46,42 +49,43 @@
 
 
 </div>
+
 <div id='financials'>
 </div>
 <div id="outgoings-div">
-  <h2>Spill the tea</h2>
   <form id="outgoings">
     <div>
+      <h2>Spill the tea</h2>
       <label for='bills-input'>Bills: </label><br>
-      <input id="bills-input" placeholder="enter budget" type="number">
+      <input class="account-input" id="bills-input" placeholder="enter budget" type="number">
     </div>
     <div>
       <label for='groceries-input'>Groceries: </label><br>
-      <input id="groceries-input" placeholder="enter budget" type="number">
+      <input class="account-input" id="groceries-input" placeholder="enter budget" type="number">
     </div>
     <div>
       <label for='travel-input'>Travel: </label><br>
-      <input id="travel-input" placeholder="enter budget" type="number">
+      <input class="account-input" id="travel-input" placeholder="enter budget" type="number">
     </div>
     <div>
       <label for='loans-input'>Loans: </label><br>
-      <input id="loans-input" placeholder="enter budget" type="number">
+      <input class="account-input" id="loans-input" placeholder="enter budget" type="number">
     </div>
     <div>
       <label for='hobbies-input'>Hobbies: </label><br>
-      <input id="hobbies-input" placeholder="enter budget" type="number">
+      <input class="account-input" id="hobbies-input" placeholder="enter budget" type="number">
     </div>
     <div>
       <label for='savings-input'>Savings: </label><br>
-      <input id="savings-input" type="number" placeholder="enter budget">
+      <input class="account-input" id="savings-input" type="number" placeholder="enter budget">
     </div>
     <div>
       <label for='entertainment-input'>Entertainment: </label><br>
-      <input id="entertainment-input" placeholder="enter budget" type="number">
+      <input class="account-input" id="entertainment-input" placeholder="enter budget" type="number">
     </div>
     <div>
       <label for='tea-input'>TEA: </label><br>
-      <input id="tea-input" placeholder="enter budget" type="number">
+      <input class="account-input" id="tea-input" placeholder="enter budget" type="number">
     </div>
   </form>
 </div>

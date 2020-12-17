@@ -21,6 +21,8 @@ body {
   padding: 25px;
   text-align: center;
   font-size: 40px;
+  color: orange;
+  font-weight: 5000;
 }
 
 [class*="col-"]{

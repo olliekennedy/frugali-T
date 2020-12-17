@@ -1,5 +1,7 @@
 .actual_heading1 {
   font-size: 42px;
+  color: orange;
+  font-weight: 5000;
 }
 
 body {
@@ -28,8 +30,13 @@ form.income-form {
   font-size: 50pt;
   align-self: center;
   align-content: center;
+  letter-spacing: -2px;
+  /* border-bottom: 2px solid black; */
+  text-shadow: 3px 3px white;
+
 
 }
+
 
 input#income_input {
   height: 20px;
@@ -165,7 +172,31 @@ label{
   padding: 0px;
   margin-left: 100px;
 }
+form {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+   position: static;
+ 
+   width: 250px;
 
+;
+  }
+.account-input{
+    width: 75%;
+    padding: 12px;
+    border: 1px solid white;
+    resize: vertical;
+
+}
+
+.account-input2{
+  width: 25%;
+  padding: 12px;
+  border: 1px solid white;
+  resize: vertical;
+
+}
 /* div#financials {
   display: flex;
   justify-content: center;
