@@ -33,6 +33,8 @@ var indexRouter = require('./routes/index');
 var transactionRouter = require("./routes/transaction");
 var aboutusRouter = require("./routes/aboutus");
 var contactusRouter = require("./routes/contactus");
+var savingsRouter = require("./routes/savings");
+
 
 const app = express();
 
@@ -70,6 +72,8 @@ app.use("/", indexRouter);
 app.use("/transaction", transactionRouter);
 app.use("/about-us", aboutusRouter);
 app.use("/contact-us", contactusRouter);
+app.use("/savings", savingsRouter);
+
 
 
 // catch 404 and forward to error handler
