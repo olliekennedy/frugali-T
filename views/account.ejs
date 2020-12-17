@@ -5,79 +5,92 @@
   <meta name="viewport">
   <title>frugali-TEA</title>
   <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="static/css/navbar.css">
 </head>
 <body>
+
+  <nav>
+      <ul class="topnav">
+      <li><a href='about-us'>About Us</a></li>
+      <li><a href='transaction'>Transactions</a></li>
+      <li><a href='Savings'>Savings</a></li>
+      <li><a href='Contact Us'>Contact Us</a></li>
+      <li class='right'><a id='sign-out'>Log out</a></li>
+    </ul>
+  </nav>
+
   <link rel="stylesheet" type="text/css" href="static/css/style.css">
-  <div>
-    <h1 class='heading'>frugali-TEA</h1>
+  <div class = "row5">
+    <h1 class="actual_heading1">frugali-TEA</h1>
   </div>
-  <button type="submit" id="sign-out">Log Out</button>
-  <div id="ProgressBar"></div>
+  <div id="ProgressBar">
+
+  </div>
+  <form class="income-form">
+    <h1>Income: £ <input type="number" id="income-input" value="1000" name="income" maxlength="5" size="5"> /month
+    <p>Outgoings: <span id="outgoings-output"></span></p>
+    <p>Net:  <span id="net-output"></span></p></h1>
+  </form>
   <script src="static/js/progressbar.js"></script>
   <div class="fact-box">
     <div class="random-facts">
-      <label for="sip-alish"><b>Sip-a-licious Tea facts</b></label>
+      <h2><label for="random-fact"><b>Sip-a-licious Tea facts!</b></label></h2>
         <p id="random-fact"></p>
       <div class="random-tips">
-        <p><b>Tip of the day</b></p>
+        <h2><b>Sip of the day</b></h2>
         <p id="random-tip"></p>
+
       </div>
     </div>
   </div>
-  <div class="income-form-div">
-    <form class="income-form">
-      Income: £ <input type="number" id="income-input" value="1000" name="income"> /month
-      <p>Net:  <span id="net-output"></span></p>
-    </form>
-  </div>
-  <div class="style-page">
-  <div class="categories">
-    <h2>
-      Spill the tea
-    </h2>
+  <div class="row2">
+
+
+</div>
+<div id='financials'>
+</div>
+<div id="outgoings-div">
+  <h2>Spill the tea</h2>
   <form id="outgoings">
-    <p>
-      <label for='bills-input'>Bills: </label>
+    <div>
+      <label for='bills-input'>Bills: </label><br>
       <input id="bills-input" placeholder="enter budget" type="number">
-    </p>
-    <p>
-      <label for='groceries-input'>Groceries: </label>
+    </div>
+    <div>
+      <label for='groceries-input'>Groceries: </label><br>
       <input id="groceries-input" placeholder="enter budget" type="number">
-    </p>
-    <p>
-      <label for='travel-input'>Travel: </label>
+    </div>
+    <div>
+      <label for='travel-input'>Travel: </label><br>
       <input id="travel-input" placeholder="enter budget" type="number">
-    </p>
-    <p>
-      <label for='loans-input'>Loans: </label>
+    </div>
+    <div>
+      <label for='loans-input'>Loans: </label><br>
       <input id="loans-input" placeholder="enter budget" type="number">
-    </p>
-    <p>
-      <label for='hobbies-input'>Hobbies: </label>
+    </div>
+    <div>
+      <label for='hobbies-input'>Hobbies: </label><br>
       <input id="hobbies-input" placeholder="enter budget" type="number">
-    </p>
-    <p>
-      <label for='savings-input'>Savings: </label>
+    </div>
+    <div>
+      <label for='savings-input'>Savings: </label><br>
       <input id="savings-input" type="number" placeholder="enter budget">
-    </p>
-    <p>
-      <label for='entertainment-input'>Entertainment: </label>
+    </div>
+    <div>
+      <label for='entertainment-input'>Entertainment: </label><br>
       <input id="entertainment-input" placeholder="enter budget" type="number">
-    </p>
-    <p>
-      <label for='tea-input'>TEA: </label>
+    </div>
+    <div>
+      <label for='tea-input'>TEA: </label><br>
       <input id="tea-input" placeholder="enter budget" type="number">
-    </p>
+    </div>
   </form>
-   <h2>Outgoings: <span id="outgoings-output"></span></h2>
-  </div>
-  </div>
+</div>
 
   <div class="container">
     <canvas id="chart"></canvas>
   </div>
 
-  <!-- <script src="static/js/homepage.js"></script> -->
   <script src="static/js/interface.js"></script>
 </body>
 </html>

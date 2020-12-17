@@ -6,11 +6,19 @@
   <title>frugali-TEA</title>
   <link rel="stylesheet" type="text/css" href="static/css/homepage.css">
   <link rel="stylesheet" type="text/css" href="static/css/signin.css">
-  
+  <link rel="stylesheet" type="text/css" href="static/css/navbar.css">
+
 </head>
 <body>
+  <nav>
+      <ul class="topnav">
+      <li><a href='signup'>Sign Up</a></li>
+      <li><a href='about-us'>About Us</a></li>
+      <li><a href='Contact Us'>Contact Us</a></li>
+    </ul>
+  </nav>
   <div class="container">
-  
+
     <%- include ('./partials/messages') %>
     <div class="card">
       <form class="signin-form" id="signin" action="/signin" method="POST">

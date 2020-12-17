@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Add User</title>
-    <link rel='stylesheet' type='text/css' href='static/css/style.css' />
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Transactions</title>
     <link rel='stylesheet' type='text/css' href='static/css/signup.css' />
-    
+    <link rel="stylesheet" type="text/css" href="static/css/navbar.css" />
   </head>
+
   <body>
-    
+    <nav>
+        <ul class="topnav">
+        <li><a href='about-us'>About Us</a></li>
+        <li><a href='account'>Home</a></li>
+        <li><a href='Savings'>Savings</a></li>
+        <li><a href='contact-us'>Contact Us</a></li>
+        <li class='right'><a id='sign-out'>Log out</a></li>
+      </ul>
+    </nav>
+
     <div class="top-section">
-    
-    <div class="container">
-      <div class="card">
-    <h1 class="header1"><%= title %></h1>
-    <h3 class="text">Spill the TEA: Enter your transactions</h3>
-    <form id="newtransaction-form" name="new-transaction" method="post" action="/transaction">
-      <input id="description-input" type="text" placeholder="description" name="description"  class="trans-input" />
+      <div class="container">
+        <div class="card">
+          <h1 class="header1"><%= title %></h1>
+          <h3 class="text">Spill the TEA: Enter your transactions</h3>
+          <form id="newtransaction-form" name="new-transaction" method="post" action="/transaction">
+            <input id="description-input" type="text" placeholder="description" name="description"  class="trans-input" />
             <label class="transaction-selector p" for="category-selector">Choose a categor<strong>tea:</strong></label>
             <select class="select-transaction" id="category-selector" name="category">
               <option class="p" value="bills">Bills</option>
@@ -27,15 +37,14 @@
               <option class="p" value="tea">TEA</option>
             </select>
             <input id="amount-input" type="text" placeholder="amount" name="amount" class="trans-input" />
-      <button id="new_transaction_submit" type="submit" class="button bouncy">Submit</button>
-    </form>
-  </div>
-
-</div>
-</div>
+            <button id="new_transaction_submit" type="submit" class="button bouncy">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <br>
     <div> <img class="backimage"></div>
-   
+
     <div class="container bottom">
       <div class="card">
     <p class="p">Filter transactions by categortea: <form id="newtransaction-form" name="new-transaction" method="get" action="/transaction">
