@@ -4,6 +4,7 @@
   "description": "We are just a group of tea frugal lovers",
   "main": "app.js",
   "scripts": {
+    "start": "frugali-tea",
     "start:test": "PORT=3030 MONGODB_URL='mongodb://localhost/frugali_TEA_test' npm start",
     "test": "npm run test:unit && npm run cypress:open",
     "test:unit": "jest",
