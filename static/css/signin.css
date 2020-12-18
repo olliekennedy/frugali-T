@@ -89,6 +89,7 @@ form {
   font-size: 50pt;
   align-self: center;
   align-content: center;
+  color: orange;
   letter-spacing: -2px;
   /* border-bottom: 2px solid black; */
   text-shadow: 3px 3px white;
@@ -103,6 +104,12 @@ form {
 .trantest {
     display: inline-block;
     vertical-align: top;
+}
+.center-content{
+    position: fixed;
+    top: 8%;
+    left: 25%;
+    transform: translateY(50%, -50%);
 }
   /* .container .card{
       position: relative;
