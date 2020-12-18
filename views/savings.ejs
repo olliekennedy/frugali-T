@@ -8,6 +8,7 @@
   <title>Savings</title>
 </head>
   <body>
+    <div id="bannerimage"></div>
     <nav>
         <ul class="topnav">
         <li><a href='account'>Home</a></li>
@@ -18,27 +19,36 @@
       </ul>
     </nav>
     <div class="header">
-      Savings!
+      Money you can spend on tea (savings)
     </div>
+
     <div class= "container">
-      <div class="pot">
-        <div class="pottop"></div>
-        <div class="potbottom"></div>
-
+      <div class="col-1">
       </div>
-      <div class="coins">
-        <div class="coin1"></div>
-        <div class="coin2"></div>
-        <div class="coin3"></div>
-        <div class="coin4"></div>
-        <div class="coin5"></div>
-        <div class="coin6"></div>
+      <div class="col-2">
+        <div class="pot">
+          <div class="pottop"></div>
+          <div class="potbottom"></div>
+          <div class="shadow"></div>
+        </div>
+        <div class="coins">
+          <div class="coin1"></div>
+          <div class="coin2"></div>
+          <div class="coin3"></div>
+          <div class="coin4"></div>
+          <div class="coin5"></div>
+          <div class="coin6"></div>
+        </div>
       </div>
-      <!-- <div class="shadow"></div> -->
+      <div class="col-3">
+        <% var sumArray = [].map(function(v){return +v}); %>
+        <% savings.forEach(function (i) {
+          sumArray.push(parseInt(i.amount))%>
+        <% }); %>
+        <% var sum = sumArray.reduce(function(a, b){return a+b;}) %>
+        <p><strong>This month you have saved </strong>£<%= sum %></p>
+      </div>
     </div>
-
-
-
-
+    <script src="static/js/interface.js"></script>
   </body>
 </html>
